@@ -11,3 +11,7 @@ Some are simply demo files.
 * Find_All_Pixel_Groups.ijm *Finds all groups of connected pixels in a binary image; demonstrates two methods.*
 
 * Line_to_Scalebar_Equal_Ticks.jnm *Divides a line into N equal parts with N-1 ticks.*
+
+* Draw_Spheres_and_Merge_Stacks.ijm *Creates two stacks with binary spheres, then overlays them in RGB colour*
+
+![Rendering of Two Spheres using ImageJ 3D Viewer](http://i.imgur.com/91El6O3.png)
