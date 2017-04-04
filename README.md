@@ -14,8 +14,9 @@ Some are simply demo files.
 
 * Draw_Spheres_and_Merge_Stacks.ijm *Creates two stacks with binary spheres, then overlays them in RGB colour*
 
-![Rendering of Two Spheres using ImageJ 3D Viewer](http://i.imgur.com/91El6O3.png =250x)
+<img src="http://i.imgur.com/91El6O3.png" alt="Rendering of Two Spheres using ImageJ 3D Viewer" height="100">
 
 * Point-to-Line Distance Distribution.ijm *Draws a scatterplot showing pixel values and distances relative to a line selection.*
 
-![Sample image to measure](http://i.imgur.com/AgTAFit.png =250x)  ![Scatter plot](http://i.imgur.com/R4Cz54F.png =250x)
+<img src="http://i.imgur.com/AgTAFit.png" alt="Sample image to measure" height="100">
+<img src="http://i.imgur.com/R4Cz54F.png" alt="Scatter plot" height="100>
