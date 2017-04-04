@@ -18,7 +18,7 @@ Some are simply demo files.
 
 * Point-to-Line Distance Distribution.ijm *Draws a scatterplot showing pixel values and distances relative to a line selection.*
 
-<img src="http://i.imgur.com/AgTAFit.png" alt="Sample image to measure" height="100"> 
+
 
 Output scatter plot, with distance on the horizontal axis and value on the vertical axis (decreasing downward).
 
