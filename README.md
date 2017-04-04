@@ -20,4 +20,6 @@ Some are simply demo files.
 
 <img src="http://i.imgur.com/AgTAFit.png" alt="Sample image to measure" height="100"> 
 
+Output scatter plot, with distance on the horizontal axis and value on the vertical axis (decreasing downward).
+
 <img src="http://i.imgur.com/R4Cz54F.png" alt="Scatter plot" height="100>
