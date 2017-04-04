@@ -32,17 +32,36 @@ yc = maxOf(0,-1*h*(y2-y1)/abs(y2-y1));
 // Record all pixel values
 
 all_values = newArray(w*h);
+all_distances = newArray(w*h);
 i = 0;
 for(y=0; y<h; y++){
 	for(x=0; x<w; x++){
 		all_values[i] = getPixel(x,y); 
+		dist = PointToLineSegment(x1,y1,x2,y2,x,y);
+		// Get sign
+		if( (dist[1]-xc)*(dist[1]-xc)+(dist[2]-yc)*(dist[2]-yc) < (x-xc)*(x-xc)+(y-yc)*(y-yc) ){
+			sign = -1;
+		}
+		else{
+			sign = 1;
+		}
+		all_distances[i] = sign*dist[0];
 		i++;
 	}
 }
 
+// Plot
+
+Plot.create("Distance (px)","Intensity","Distribution");
+Plot.setColor("#4444FF");
+//Plot.setLineWidth(2);
+Plot.add("dots",all_distances,all_values);
+Plot.show;
+
 // Output window
 setBatchMode(true);
-newImage("Output", "8-bit black", (MaxDist+1), (MaxValue-MinValue+1), 2);
+Array.getStatistics(all_distances, d_min, d_max, d_mean, d_std);
+newImage("Output", "8-bit black", (d_max-d_min+1), (MaxValue-MinValue+1), 1);
 selectImage("Output");
 output = getImageID;
 
@@ -50,17 +69,10 @@ i = 0;
 for(y=0; y<h; y++){
 	for(x=0; x<w; x++){
 		if(all_values[i] >= MinValue && all_values[i] <= MaxValue){
-			dist = PointToLineSegment(x1,y1,x2,y2,x,y);
-			if(dist[0] <= MaxDist){
-				if( (dist[1]-xc)*(dist[1]-xc)+(dist[2]-yc)*(dist[2]-yc) < (x-xc)*(x-xc)+(y-yc)*(y-yc) ){
-					setSlice(2);
-				}
-				else{
-					setSlice(1);
-				}
-				current = getPixel(round(dist[0]),round(all_values[i]));
+			if(abs(all_distances[i]) <= MaxDist){
+				current = getPixel(round(all_distances[i]-d_min),round(all_values[i]));
 				current++;
-				setPixel(round(dist[0]),round(all_values[i]),current);
+				setPixel(round(all_distances[i]-d_min),round(all_values[i]),current);
 			}
 		}
 		i++;
@@ -70,6 +82,11 @@ for(y=0; y<h; y++){
 
 open(getDirectory("luts") + "mpl-viridis.lut"); 
 run("Enhance Contrast", "saturated=0.35");
+makeLine(abs(d_min),0,abs(d_min),getHeight);
+Overlay.addSelection("#80FFFF00",1);
+Overlay.show;
+run("Select None");
+
 setBatchMode(false);
 
 // Functions
