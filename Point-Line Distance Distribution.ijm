@@ -52,7 +52,7 @@ for(y=0; y<h; y++){
 
 // Plot
 
-Plot.create("Distance (px)","Intensity","Distribution");
+Plot.create("Distribution","Distance (px)","Intensity");
 Plot.setColor("#4444FF");
 //Plot.setLineWidth(2);
 Plot.add("dots",all_distances,all_values);
