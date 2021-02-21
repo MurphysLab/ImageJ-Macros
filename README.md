@@ -22,8 +22,19 @@ Some are simply demo files.
 
   Output scatter plot, with distance on the horizontal axis and value on the vertical axis (decreasing downward).
 
-
-
-
-
   <img src="http://i.imgur.com/IYI2v3P.png" alt="Scatter plot" height="100">
+
+* Square_Grid_Crop.ijm *Crops out squares from a grid that are separated by dark lines using particle analysis.*
+
+  Input image of a grid:
+  
+  <img src="https://i.imgur.com/n3isQLk.jpg" alt="Sample Grid" height="200">
+  
+  Output images from grid:
+  
+  <img src="https://i.imgur.com/54mTPe1.jpg" alt="Grid Square 1" height="100">
+  <img src="https://i.imgur.com/CQdMAzt.jpg" alt="Grid Square 2" height="100">
+  <img src="https://i.imgur.com/bDsU807.jpg" alt="Grid Square 3" height="100">
+  <img src="https://i.imgur.com/tD56Y4Q.jpg" alt="Grid Square 4" height="100">
+
+
