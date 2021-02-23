@@ -37,4 +37,8 @@ Some are simply demo files.
   <img src="https://i.imgur.com/bDsU807.jpg" alt="Grid Square 3" height="100">
   <img src="https://i.imgur.com/tD56Y4Q.jpg" alt="Grid Square 4" height="100">
 
+* PixelShuffle2.ijm is a replacement for PixelShuffle.ijm. The original was very slow due to an inefficient shuffling algorithm. The replacement uses the [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle) algorithm:
+
+  <img src="https://i.imgur.com/fka7ycA.jpg" alt="Grid Square 1" height="100"> → <img src="https://i.imgur.com/X68oo4p.jpg" alt="Grid Square 1" height="100">
+
 
